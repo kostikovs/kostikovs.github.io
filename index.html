@@ -1,83 +1,165 @@
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel = "stylesheet" href="css/homeCS.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arturs Kostikovs — IT Manager &amp; Full-Stack Engineer</title>
+<meta name="description" content="Portfolio of Arturs Kostikovs — IT Manager and full-stack engineer. Systems integration, automation, e-commerce and infrastructure (.NET · PHP · Python).">
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1b2430; --muted:#5b6672;
+    --accent:#1f3864; --accent2:#2f6fb0; --line:#e6e9ee; --chip:#eef2f7;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0e1116; --card:#161b22; --ink:#e7ecf3; --muted:#9aa6b2;
+      --accent:#7aa7e0; --accent2:#93c0f0; --line:#232a33; --chip:#1c232c;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);}
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--bg); color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  a{color:var(--accent2); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+  header{padding:56px 0 28px}
+  .name{font-size:clamp(28px,6vw,44px); font-weight:800; letter-spacing:-.02em; margin:0; color:var(--ink)}
+  .role{font-size:clamp(15px,3.2vw,19px); color:var(--muted); margin:6px 0 0; font-weight:600}
+  .tagline{margin:14px 0 0; color:var(--muted); max-width:62ch}
+  .contact{margin:20px 0 0; display:flex; flex-wrap:wrap; gap:8px 10px; font-size:14px}
+  .contact a,.contact span{background:var(--chip); border:1px solid var(--line); color:var(--ink);
+    padding:7px 12px; border-radius:999px; display:inline-flex; align-items:center; gap:6px}
+  section{padding:26px 0; border-top:1px solid var(--line)}
+  h2{font-size:13px; text-transform:uppercase; letter-spacing:.14em; color:var(--accent);
+    margin:0 0 18px; font-weight:800}
+  .summary{color:var(--ink); max-width:72ch; margin:0}
+  .skills{display:grid; gap:10px}
+  .skillrow{display:flex; gap:10px; flex-wrap:wrap; align-items:baseline}
+  .skilllead{font-weight:700; min-width:190px; color:var(--ink)}
+  .skilltext{color:var(--muted)}
+  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+  @media (max-width:640px){ .grid{grid-template-columns:1fr} .skilllead{min-width:0} }
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px;
+    box-shadow:var(--shadow)}
+  .card h3{margin:0 0 6px; font-size:17px; color:var(--ink)}
+  .card p{margin:0 0 12px; color:var(--muted); font-size:14.5px}
+  .tags{display:flex; flex-wrap:wrap; gap:6px}
+  .tag{font-size:12px; color:var(--accent); background:var(--chip); border:1px solid var(--line);
+    padding:3px 9px; border-radius:999px}
+  .xp{display:grid; gap:14px}
+  .xpitem{display:grid; grid-template-columns:150px 1fr; gap:14px}
+  @media (max-width:640px){ .xpitem{grid-template-columns:1fr; gap:2px} }
+  .xpwhen{color:var(--muted); font-size:14px; font-variant-numeric:tabular-nums}
+  .xprole{font-weight:700}
+  .xporg{color:var(--muted); font-size:14px}
+  .langs{display:flex; flex-wrap:wrap; gap:8px 10px}
+  .lang{background:var(--chip); border:1px solid var(--line); padding:6px 12px; border-radius:999px; font-size:14px}
+  footer{padding:28px 0 56px; color:var(--muted); font-size:14px; border-top:1px solid var(--line)}
+</style>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" style="
-    background-color: transparent;
-">
-  <div class="container-fluid" style="
-    background-color: transparent;
-    background-image: linear-gradient(to right, #000, transparent);
-">
-    <div class="navbar-header">
-      <img src="img/pngwing 1.jpg">
+<div class="wrap">
+
+  <header>
+    <h1 class="name">Arturs Kostikovs</h1>
+    <p class="role">IT Manager &amp; Full-Stack Engineer</p>
+    <p class="tagline">Systems integration, automation &amp; infrastructure. I single-handedly built and ran the entire IT/Digital function of an international manufacturer — and wrote the code behind it. .NET · PHP · Python · Node.js.</p>
+    <nav class="contact">
+      <span>📍 Warsaw, Poland · open to relocation / remote</span>
+      <a href="mailto:kostikovs2@gmail.com">✉️ kostikovs2@gmail.com</a>
+      <a href="https://www.linkedin.com/in/arturs-kostikovs-b86a89249/" target="_blank" rel="noopener">in/ LinkedIn</a>
+      <a href="https://github.com/kostikovs" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p class="summary">IT manager and full-stack engineer with 9+ years in web development and 7+ years leading the entire IT/Digital function of FEDRS, an international consumer-goods manufacturer. I built the company’s digital operation from the ground up — online store, e-commerce, advertising and IT infrastructure — and designed and built 8 production systems over 7 years across .NET, PHP, Python and Node.js. Equally comfortable owning IT strategy, budgets, vendors and security as writing the code.</p>
+  </section>
+
+  <section>
+    <h2>Core Skills</h2>
+    <div class="skills">
+      <div class="skillrow"><span class="skilllead">Languages &amp; frameworks</span><span class="skilltext">C# / .NET 8 · PHP (Laravel, WordPress / WooCommerce) · Python (aiogram) · JavaScript / jQuery / Node.js · HTML/CSS · SQL</span></div>
+      <div class="skillrow"><span class="skilllead">Systems &amp; platforms</span><span class="skilltext">Bitrix24 CRM · Subiekt nexo ERP (Sfera SDK) · WooCommerce · Google Workspace &amp; Cloud</span></div>
+      <div class="skillrow"><span class="skilllead">Infrastructure &amp; DevOps</span><span class="skilltext">Linux · Docker · nginx · WireGuard / Xray / AmneziaWG · DigitalOcean · SQL Server · MySQL · PostgreSQL (pgvector)</span></div>
+      <div class="skillrow"><span class="skilllead">Integrations &amp; data</span><span class="skilltext">REST / OAuth · webhooks · Google Sheets API · LLM integration (Claude / OpenAI) · Telegram Bot API</span></div>
+      <div class="skillrow"><span class="skilllead">Management</span><span class="skilltext">IT strategy &amp; budgeting · vendor &amp; team management · access &amp; identity · security &amp; GDPR</span></div>
     </div>
-    <ul class="nav navbar-nav center" style="
-    justify-content: center;
-    display: flex;
-    float: none;
-">
-      <li><a href="hero.html">ПЕРСОНАЖИ</a>|</li>
-      <li><a href="about.html">О игре</a>|</li>
-      <li><a href="#">О нас</a></li>
-    </ul>
-  </div>
-</nav>
-<!--             <div class="main_menu">
-                
-                <p></p>
-                <p></p>
-                <p></p>
+  </section>
 
-            </div> -->
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="grid">
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
+      <article class="card">
+        <h3>ERP ↔ CRM ↔ Webshop Automation</h3>
+        <p>End-to-end order → invoice → production → shipment automation connecting Bitrix24 CRM, WooCommerce and Subiekt nexo ERP. A C#/.NET 8 SDK service plus PHP/WordPress REST integrations over a WireGuard tunnel — removed ~6 hours of manual order processing.</p>
+        <div class="tags"><span class="tag">C# / .NET 8</span><span class="tag">PHP</span><span class="tag">REST / OAuth</span><span class="tag">WireGuard</span></div>
+      </article>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
+      <article class="card">
+        <h3>Multilingual E-commerce Platform</h3>
+        <p>fedrs.eu — a WooCommerce storefront in 5 languages with ~346 products, built from platform selection and theming to payments, Europe-wide shipping (InPost/DHL/UPS), SEO and catalog integrations (Google/Meta).</p>
+        <div class="tags"><span class="tag">WordPress / WooCommerce</span><span class="tag">PHP</span><span class="tag">WPML</span><span class="tag">nginx</span></div>
+      </article>
 
-      <div class="item active">
-        <img src="img/image 5.jpg" alt="Los Angeles" style="width:100%;">
-        <div class="carousel-caption">
-              <h3>DOTA 2 - СОВРЕМЕННЫЙ МНОГОПОЛЬЗОВАТЕЛЬСКИЙ ШЕДЕВР</h3>
-              <p>КАЖДЫЙ ДЕНЬ МИЛЛИОНЫ ИГРОКОВ ВСТУПАЮТ В БИТВУ КОМАНД 5 НА 5 В РОЛИ ОДНОГО ИЗ СОТНИ ГЕРОЕВ. 
-                ДАННАЯ ИГРА СПОСОБНА СИЛЬНО РАЗВИТЬ МЫШЛЕНИЕ И УЗНАТЬ МНОГОЕ О СЕБЕ, О ЧЁМ ТЫ ДАЖЕ НЕ ЗНАЛ</p>
-        </div>
-      </div>
+      <article class="card">
+        <h3>Corporate VPN Infrastructure</h3>
+        <p>Corporate VPN for secure remote access and data protection, serving ~130 users. Built on Xray (VLESS/REALITY), AmneziaWG and WireGuard with ECMP load-balancing, automated monitoring and a Telegram control bot.</p>
+        <div class="tags"><span class="tag">WireGuard</span><span class="tag">Xray</span><span class="tag">AmneziaWG</span><span class="tag">Linux</span><span class="tag">Python</span></div>
+      </article>
 
-      <div class="item">
-        <img src="img/image 6.jpg"alt="New York" style="width:100%;">
-        <div class="carousel-caption">
-              <h3>ПРИСОЕДИНЯЙСЯ К DOTA 2</h3>
-              <h4>СТАНЬ КЛЮЧЁМ К ПОБЕДЕ111</h4>
-              <p>--СКАЧАТЬ--</p>
-        </div>
-      </div>
-  
+      <article class="card">
+        <h3>Incident-Management Bot (ISO 9001 / 22000)</h3>
+        <p>Telegram bot that replaced an Excel incident register: CAPA workflow, immutable audit log, voice-to-text input, semantic search and LLM-assisted drafting — a quality/compliance registry for a food-safety &amp; ISO environment.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">aiogram</span><span class="tag">PostgreSQL + pgvector</span><span class="tag">Claude LLM</span><span class="tag">STT</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Interactive 3D Exhibition Kiosk</h3>
+        <p>Touchscreen kiosk and 3D product catalog for international trade shows: real-time 3D rendering, a camera body-tracking mini-game, lead capture and a fully offline-first runtime.</p>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">Three.js</span><span class="tag">MediaPipe</span><span class="tag">Vanilla JS</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Local Transcription Tool</h3>
+        <p>Offline audio/video → text with speaker diarization, GPU-accelerated and privacy-first (nothing leaves the machine). A practical internal tool for meetings and interviews.</p>
+        <div class="tags"><span class="tag">whisper.cpp</span><span class="tag">CUDA</span><span class="tag">Python</span><span class="tag">ffmpeg</span></div>
+      </article>
+
     </div>
+  </section>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+  <section>
+    <h2>Experience</h2>
+    <div class="xp">
+      <div class="xpitem"><div class="xpwhen">2019 – 2026</div><div><div class="xprole">IT Manager / Senior Digital Manager</div><div class="xporg">FEDRS Sp. z o.o. — Warsaw, Poland</div></div></div>
+      <div class="xpitem"><div class="xpwhen">2019 – 2020</div><div><div class="xprole">Senior Full-Stack Developer</div><div class="xporg">Yandex Eats (freelance) — Moscow</div></div></div>
+      <div class="xpitem"><div class="xpwhen">2018 – 2019</div><div><div class="xprole">Middle Full-Stack Developer</div><div class="xporg">SIA CrewInspector — Latvia</div></div></div>
+      <div class="xpitem"><div class="xpwhen">2017 – 2018</div><div><div class="xprole">PHP Developer</div><div class="xporg">SIA SMW-Engineering — Latvia</div></div></div>
+      <div class="xpitem"><div class="xpwhen">2017</div><div><div class="xprole">PHP Developer (Erasmus)</div><div class="xporg">Suprasoft — Valencia, Spain</div></div></div>
+    </div>
+  </section>
 
+  <section>
+    <h2>Languages</h2>
+    <div class="langs">
+      <span class="lang">Latvian — native</span>
+      <span class="lang">Russian — native</span>
+      <span class="lang">English — C1–C2</span>
+      <span class="lang">Spanish — basic</span>
+      <span class="lang">Polish — basic</span>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Arturs Kostikovs · <a href="mailto:kostikovs2@gmail.com">kostikovs2@gmail.com</a> · <a href="https://www.linkedin.com/in/arturs-kostikovs-b86a89249/" target="_blank" rel="noopener">LinkedIn</a>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+</div>
+</body>
 </html>
