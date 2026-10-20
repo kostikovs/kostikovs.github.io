@@ -167,24 +167,6 @@
       </article>
 
       <article class="card">
-        <h3>Advertising a Restricted Product</h3>
-        <p class="lede">Marketing a category that mainstream ad platforms prohibit.</p>
-        <ul>
-          <li>Found compliant channels and approaches to promote a nicotine product where major platforms generally ban such advertising.</li>
-          <li>Set up and ran the company’s social media and Meta Business — generating traffic and sales where competitors couldn’t advertise.</li>
-        </ul>
-        <p class="struct"><b>Structure:</b> compliant channel strategy + Meta Business setup; automated, filtered product feeds generated per market so only allowed items/fields are exported.</p>
-        <p class="codehead">php — build an ad-compliant product feed</p>
-        <pre><code>$feed = array_map(fn($p) =&gt; [
-  'id'           =&gt; $p-&gt;get_sku(),
-  'title'        =&gt; $p-&gt;get_name(),
-  'link'         =&gt; get_permalink($p-&gt;get_id()),
-  'availability' =&gt; $p-&gt;is_in_stock() ? 'in stock' : 'out of stock',
-], wc_get_products(['category' =&gt; 'allowed', 'limit' =&gt; -1]));</code></pre>
-        <div class="tags"><span class="tag">Meta Business</span><span class="tag">Paid social</span><span class="tag">Growth</span><span class="tag">Ad compliance</span></div>
-      </article>
-
-      <article class="card">
         <h3>Corporate VPN Infrastructure</h3>
         <p class="lede">Secure remote access and data protection for the whole company.</p>
         <ul>
