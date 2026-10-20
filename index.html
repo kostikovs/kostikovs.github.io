@@ -19,33 +19,41 @@
   *{box-sizing:border-box}
   html,body{margin:0}
   body{background:var(--bg); color:var(--ink);
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;}
   a{color:var(--accent2); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
-  header{padding:56px 0 28px}
-  .name{font-size:clamp(28px,6vw,44px); font-weight:800; letter-spacing:-.02em; margin:0; color:var(--ink)}
+  .wrap{max-width:940px; margin:0 auto; padding:0 20px}
+  header{padding:56px 0 24px}
+  .name{font-size:clamp(28px,6vw,46px); font-weight:800; letter-spacing:-.02em; margin:0; color:var(--ink)}
   .role{font-size:clamp(15px,3.2vw,19px); color:var(--muted); margin:6px 0 0; font-weight:600}
-  .tagline{margin:14px 0 0; color:var(--muted); max-width:62ch}
+  .tagline{margin:14px 0 0; color:var(--muted); max-width:66ch}
   .contact{margin:20px 0 0; display:flex; flex-wrap:wrap; gap:8px 10px; font-size:14px}
   .contact a,.contact span{background:var(--chip); border:1px solid var(--line); color:var(--ink);
     padding:7px 12px; border-radius:999px; display:inline-flex; align-items:center; gap:6px}
   section{padding:26px 0; border-top:1px solid var(--line)}
   h2{font-size:13px; text-transform:uppercase; letter-spacing:.14em; color:var(--accent);
     margin:0 0 18px; font-weight:800}
-  .summary{color:var(--ink); max-width:72ch; margin:0}
+  .summary{color:var(--ink); max-width:74ch; margin:0}
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:6px}
+  @media (max-width:640px){ .stats{grid-template-columns:repeat(2,1fr)} }
+  .stat{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; box-shadow:var(--shadow)}
+  .stat b{display:block; font-size:22px; color:var(--accent2); letter-spacing:-.01em}
+  .stat span{font-size:13px; color:var(--muted)}
   .skills{display:grid; gap:10px}
   .skillrow{display:flex; gap:10px; flex-wrap:wrap; align-items:baseline}
-  .skilllead{font-weight:700; min-width:190px; color:var(--ink)}
+  .skilllead{font-weight:700; min-width:200px; color:var(--ink)}
   .skilltext{color:var(--muted)}
+  @media (max-width:640px){ .skilllead{min-width:0} }
   .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
-  @media (max-width:640px){ .grid{grid-template-columns:1fr} .skilllead{min-width:0} }
-  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px;
-    box-shadow:var(--shadow)}
-  .card h3{margin:0 0 6px; font-size:17px; color:var(--ink)}
-  .card p{margin:0 0 12px; color:var(--muted); font-size:14.5px}
-  .tags{display:flex; flex-wrap:wrap; gap:6px}
+  @media (max-width:720px){ .grid{grid-template-columns:1fr} }
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px;
+    box-shadow:var(--shadow); display:flex; flex-direction:column}
+  .card h3{margin:0 0 4px; font-size:17px; color:var(--ink)}
+  .card .lede{margin:0 0 10px; color:var(--muted); font-size:14px; font-style:italic}
+  .card ul{margin:0 0 12px; padding-left:18px; color:var(--ink); font-size:14.5px}
+  .card ul li{margin:3px 0}
+  .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto}
   .tag{font-size:12px; color:var(--accent); background:var(--chip); border:1px solid var(--line);
     padding:3px 9px; border-radius:999px}
   .xp{display:grid; gap:14px}
@@ -76,7 +84,15 @@
 
   <section>
     <h2>About</h2>
-    <p class="summary">IT manager and full-stack engineer with 9+ years in web development and 7+ years leading the entire IT/Digital function of FEDRS, an international consumer-goods manufacturer. I built the company’s digital operation from the ground up — online store, e-commerce, advertising and IT infrastructure — and designed and built 8 production systems over 7 years across .NET, PHP, Python and Node.js. Equally comfortable owning IT strategy, budgets, vendors and security as writing the code.</p>
+    <p class="summary">IT manager and full-stack engineer with 9+ years in web development and 7+ years leading the entire IT/Digital function of FEDRS, an international nicotine &amp; caffeine pouch manufacturer. I built the company’s digital operation from the ground up — online store, e-commerce, advertising and IT infrastructure — and designed and built 8 production systems over 7 years across .NET, PHP, Python and Node.js. Equally comfortable owning IT strategy, budgets, vendors and security as writing the code. Below are the projects I’m most proud of — described without any confidential data.</p>
+    <div class="stats">
+      <div class="stat"><b>9+ yrs</b><span>in web development</span></div>
+      <div class="stat"><b>8</b><span>production systems built</span></div>
+      <div class="stat"><b>5 languages</b><span>e-commerce storefront</span></div>
+      <div class="stat"><b>~130</b><span>users on the VPN I run</span></div>
+      <div class="stat"><b>100k+/mo</b><span>form submissions handled</span></div>
+      <div class="stat"><b>ISO 9001/22000</b><span>compliance tooling</span></div>
+    </div>
   </section>
 
   <section>
@@ -91,42 +107,93 @@
   </section>
 
   <section>
-    <h2>Featured Projects</h2>
+    <h2>Selected Work</h2>
     <div class="grid">
 
       <article class="card">
         <h3>ERP ↔ CRM ↔ Webshop Automation</h3>
-        <p>End-to-end order → invoice → production → shipment automation connecting Bitrix24 CRM, WooCommerce and Subiekt nexo ERP. A C#/.NET 8 SDK service plus PHP/WordPress REST integrations over a WireGuard tunnel — removed ~6 hours of manual order processing.</p>
-        <div class="tags"><span class="tag">C# / .NET 8</span><span class="tag">PHP</span><span class="tag">REST / OAuth</span><span class="tag">WireGuard</span></div>
+        <p class="lede">An order flows automatically from quote to shipment across three systems.</p>
+        <ul>
+          <li>Order → invoice → production order → shipment, generated automatically across Bitrix24 CRM, WooCommerce and Subiekt nexo ERP.</li>
+          <li>A C#/.NET 8 service on the ERP side plus PHP/WordPress REST endpoints on the shop side, linked over a WireGuard tunnel.</li>
+          <li>Removed ~6 hours of manual order processing; handles B2B, multi-currency (EUR), discounts and automatic document generation.</li>
+        </ul>
+        <div class="tags"><span class="tag">C# / .NET 8</span><span class="tag">PHP</span><span class="tag">WordPress REST</span><span class="tag">Subiekt nexo SDK</span><span class="tag">Bitrix24</span><span class="tag">WireGuard</span></div>
       </article>
 
       <article class="card">
-        <h3>Multilingual E-commerce Platform</h3>
-        <p>fedrs.eu — a WooCommerce storefront in 5 languages with ~346 products, built from platform selection and theming to payments, Europe-wide shipping (InPost/DHL/UPS), SEO and catalog integrations (Google/Meta).</p>
-        <div class="tags"><span class="tag">WordPress / WooCommerce</span><span class="tag">PHP</span><span class="tag">WPML</span><span class="tag">nginx</span></div>
+        <h3>Multilingual E-commerce Platform — fedrs.eu</h3>
+        <p class="lede">A storefront built from scratch for European markets.</p>
+        <ul>
+          <li>WooCommerce store in 5 languages, ~346 products — theming, PHP functionality, SEO and UX/UI.</li>
+          <li>Payments, Europe-wide shipping (InPost/DHL/UPS), warehouse-stock sync and Google/Meta product feeds.</li>
+          <li>Role-based admin for warehouse, sales and SEO staff.</li>
+          <li><b>2022:</b> ~10,000 monthly visitors and ~€10,000 in monthly online revenue.</li>
+        </ul>
+        <div class="tags"><span class="tag">WordPress / WooCommerce</span><span class="tag">PHP</span><span class="tag">WPML</span><span class="tag">nginx</span><span class="tag">SEO</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Advertising a Restricted Product</h3>
+        <p class="lede">Marketing a category that mainstream ad platforms prohibit.</p>
+        <ul>
+          <li>Found compliant channels and approaches to promote a nicotine product where major platforms generally ban such advertising.</li>
+          <li>Set up and ran the company’s social media and Meta Business — generating traffic and sales where competitors couldn’t advertise.</li>
+        </ul>
+        <div class="tags"><span class="tag">Meta Business</span><span class="tag">Paid social</span><span class="tag">Growth</span><span class="tag">Ad compliance</span></div>
       </article>
 
       <article class="card">
         <h3>Corporate VPN Infrastructure</h3>
-        <p>Corporate VPN for secure remote access and data protection, serving ~130 users. Built on Xray (VLESS/REALITY), AmneziaWG and WireGuard with ECMP load-balancing, automated monitoring and a Telegram control bot.</p>
-        <div class="tags"><span class="tag">WireGuard</span><span class="tag">Xray</span><span class="tag">AmneziaWG</span><span class="tag">Linux</span><span class="tag">Python</span></div>
+        <p class="lede">Secure remote access and data protection for the whole company.</p>
+        <ul>
+          <li>~130 users on Xray (VLESS/REALITY), AmneziaWG and WireGuard, with ECMP load-balancing across exit nodes.</li>
+          <li>Automated monitoring, nightly health checks and a Telegram control bot for alerts and key management.</li>
+          <li>Resilient to IP blocks with fast failover between nodes.</li>
+        </ul>
+        <div class="tags"><span class="tag">WireGuard</span><span class="tag">Xray</span><span class="tag">AmneziaWG</span><span class="tag">Linux</span><span class="tag">Python</span><span class="tag">Telegram Bot API</span></div>
       </article>
 
       <article class="card">
         <h3>Incident-Management Bot (ISO 9001 / 22000)</h3>
-        <p>Telegram bot that replaced an Excel incident register: CAPA workflow, immutable audit log, voice-to-text input, semantic search and LLM-assisted drafting — a quality/compliance registry for a food-safety &amp; ISO environment.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">aiogram</span><span class="tag">PostgreSQL + pgvector</span><span class="tag">Claude LLM</span><span class="tag">STT</span></div>
+        <p class="lede">A Telegram registry that replaced an Excel incident log in a food-safety &amp; quality environment.</p>
+        <ul>
+          <li>5-stage CAPA workflow with roles, blocking rules, an immutable history and an audit journal.</li>
+          <li>Voice-to-text input, semantic search and LLM-assisted drafting; multilingual (RU / PL / EN).</li>
+          <li>Two-way Google Sheets data mirror and Drive attachments.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">aiogram</span><span class="tag">PostgreSQL + pgvector</span><span class="tag">Claude LLM</span><span class="tag">faster-whisper</span></div>
       </article>
 
       <article class="card">
         <h3>Interactive 3D Exhibition Kiosk</h3>
-        <p>Touchscreen kiosk and 3D product catalog for international trade shows: real-time 3D rendering, a camera body-tracking mini-game, lead capture and a fully offline-first runtime.</p>
-        <div class="tags"><span class="tag">Node.js</span><span class="tag">Three.js</span><span class="tag">MediaPipe</span><span class="tag">Vanilla JS</span></div>
+        <p class="lede">A touchscreen stand for international trade shows.</p>
+        <ul>
+          <li>Real-time 3D product catalog plus a camera body-tracking mini-game with a leaderboard.</li>
+          <li>Visitor lead capture with business-card OCR; runs 100% offline on the stand.</li>
+          <li>Debuted at InterTabac (Messe Dortmund).</li>
+        </ul>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">Three.js</span><span class="tag">MediaPipe</span><span class="tag">Vanilla JS</span><span class="tag">Git LFS</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Courier Hiring &amp; Training Platform — Yandex Eats</h3>
+        <p class="lede">Built from scratch to recruit and train couriers at scale.</p>
+        <ul>
+          <li>Flexible form/test builder linked to Google Sheets, with video and a points system; dual-auth portal and calendar.</li>
+          <li>CMS builders to automate recruitment workflows.</li>
+          <li><b>100,000+</b> training submissions per month, fully automated.</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">Google Sheets</span><span class="tag">MySQL</span></div>
       </article>
 
       <article class="card">
         <h3>Local Transcription Tool</h3>
-        <p>Offline audio/video → text with speaker diarization, GPU-accelerated and privacy-first (nothing leaves the machine). A practical internal tool for meetings and interviews.</p>
+        <p class="lede">Offline speech-to-text for meetings and interviews — privacy first.</p>
+        <ul>
+          <li>GPU-accelerated transcription with speaker diarization; nothing leaves the machine.</li>
+          <li>Drag-and-drop, accepts common audio/video formats.</li>
+        </ul>
         <div class="tags"><span class="tag">whisper.cpp</span><span class="tag">CUDA</span><span class="tag">Python</span><span class="tag">ffmpeg</span></div>
       </article>
 
